@@ -64,6 +64,10 @@ function App() {
         <button className={'icon-btn'+(settings?' active':'')} type="button" aria-label="배포 주소 설정" onClick={()=>{setDraft(activeUrl);setSettings(x=>!x);setError('')}}><Settings2 size={17}/></button>
       </div>
     </header>
+    <aside role="status" style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:10,padding:'9px 13px',background:'#f0e9f9',color:'#694994',fontSize:12,flexWrap:'wrap'}}>
+      <span>Dance와 Muscle은 Voice Flow Hub로 이전했어. 이 허브는 기존 URL 설정 확인용으로 남겨뒀어.</span>
+      <a href="https://voice-flow-hub.pages.dev/" target="_blank" rel="noopener noreferrer" style={{color:'#694994',fontWeight:700,whiteSpace:'nowrap'}}>Voice Flow Hub 열기 ↗</a>
+    </aside>
     {settings&&<section className="settings" aria-label="원본 앱 주소 설정">
       <div className="settings-title"><b>{current.label} 배포 URL</b><button type="button" className="icon-btn" onClick={()=>setSettings(false)} aria-label="닫기"><X size={17}/></button></div>
       <p>원본 앱의 Cloudflare Pages 주소를 넣어줘. 이 허브에만 저장되며 기존 앱의 데이터는 변경되지 않아.</p>
